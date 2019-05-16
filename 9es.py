@@ -15,15 +15,15 @@ s=(n1,n4)
 szorzat=np.zeros(s)
 if n2!=n3:
     print("A két mátrix nem szorozható össze")
+else:
+    for i in range(len(a)):
+        for j in range(len(b[0])):
+            for k in range(len(b)):
+                szorzat[i][j]+=a[i][k]*b[k][j]
 
-for i in range(len(a)):
-    for j in range(len(b[0])):
-        for k in range(len(b)):
-            szorzat[i][j]+=a[i][k]*b[k][j]
 
-
-print("A matrix:\n",a)
-print("B mátrix:\n",b)
-print("A szorzatuk:\n",szorzat)
+    print("A matrix:\n",a)
+    print("B mátrix:\n",b)
+    print("A szorzatuk:\n",szorzat)
 
 
