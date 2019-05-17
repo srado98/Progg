@@ -30,6 +30,6 @@ def main():
         with open("piramis.txt", "w+") as f:
             f.write(szampiramis(n))
     except:
-        print("Fájlkezelési hiba")
+        print("Hiba")
         exit(2)
 main()
