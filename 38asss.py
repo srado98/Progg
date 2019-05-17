@@ -35,7 +35,7 @@ def keres(matrix,monogram):
     for i in range(matrix.shape[0]):
         for j in range(0, matrix.shape[1], 2):
             if matrix[i, j] == monogram[0] and matrix[i, j + 1] == monogram[1]:
-                return [i+1,j+1]
+                return [i,j]
     return -1
 
 def modosit(matrix,monogram,kivant_sor,kivant_oszlop):
@@ -60,17 +60,14 @@ def torles(matrix,monogram):
         matrix[pozicio[0], pozicio[1]] = "X"
         matrix[pozicio[0], pozicio[1] + 1] = "X"
 
-Mozi=letrehoz(40,100)
-foglal(Mozi,'SD',3,1)
+Mozi=letrehoz(10,6)
+foglal(Mozi,'SD',5,3)
 print(Mozi)
-print(keres(Mozi,'SD '))
+print(keres(Mozi,'SD'))
 modosit(Mozi,'SD',2,3)
 print(Mozi)
 torles(Mozi,'SD')
 print()
 print(Mozi)
-
-
-
 
 
